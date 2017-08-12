@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public delegate void CalcDelegate(int a,int b);
 public class Calc : MonoBehaviour {
-	public delegate void CalcDelegate(int a,int b);
+	
 
 	void Start()
 	{
