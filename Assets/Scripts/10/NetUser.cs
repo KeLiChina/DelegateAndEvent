@@ -13,4 +13,5 @@ public class NetUser : MonoBehaviour {
 	{
 		Debug.Log(gameObject.name + " Get New Mesegger" + info);
 	}
+	
 }
