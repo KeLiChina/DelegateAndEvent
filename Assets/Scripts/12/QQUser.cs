@@ -6,15 +6,28 @@ public class QQUser : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//普通方法
 		// QQGroud.instance.loginDel += Login;
 		// QQGroud.instance.messageDel += Message;
-		QQGroud.instance.loginDel += delegate(string name)
+
+		//匿名方法
+		// QQGroud.instance.loginDel += delegate(string name)
+		// {
+		// 	Debug.Log(name + " is login !!!");
+		// };
+		// QQGroud.instance.messageDel += delegate(string name,string message)
+		// {
+		// 	Debug.Log(name +" say: "+message +"!!!");
+		// };
+
+		// Lambda表达方式
+		QQGroud.instance.loginDel += (string name) => 
 		{
-			Debug.Log(name + " is login !!!");
+			Debug.Log(name + " Have Been Login By Lambda");
 		};
-		QQGroud.instance.messageDel += delegate(string name,string message)
+		QQGroud.instance.messageDel += (string name,string message) => 
 		{
-			Debug.Log(name +" say: "+message +"!!!");
+			Debug.Log(name + " Say " + message + " by Lambda");
 		};
 	}
 	
